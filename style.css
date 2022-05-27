@@ -4,16 +4,12 @@
 body {
   background-color: #faf8f6;
   font-size: 18px;
-  /* line-height: 32px;
-    letter-spacing: 0px; */
 }
-
 h3 {
   font-size: 72px;
   font-weight: lighter;
   letter-spacing: -1px;
 }
-
 .profile > h4 {
   font-size: 48px;
   font-weight: lighter;
@@ -24,6 +20,10 @@ h3 {
   letter-spacing: 0px;
   font-weight: lighter;
   line-height: 26px;
+  padding-right: 80px;
+}
+.heading-p {
+  padding-right: 50%;
 }
 .stat-list > p {
   font-weight: normal;
@@ -39,7 +39,6 @@ h3 {
 .stat-list {
   margin: 30px 0;
 }
-
 .container {
   padding: 10px 140px;
 }
@@ -73,7 +72,6 @@ button.head:hover {
   clear: both;
   padding: 0px 0;
 }
-
 .hero-item-left {
   position: relative;
   flex: 80%;
@@ -85,7 +83,6 @@ button.head:hover {
 .hero-text {
   padding-bottom: 80px;
 }
-
 button.hero {
   background-color: #172339;
   border-radius: 5px;
@@ -226,6 +223,7 @@ button.hero:hover {
 }
 
 /* mobile responsiveness */
+
 @media (max-width: 600px) {
   .container {
     padding: 5px 0px;
@@ -233,7 +231,9 @@ button.hero:hover {
   .hero-image {
     display: none;
   }
-
+  .heading-p {
+    padding-right: 0;
+  }
   .hero-item-left {
     background-repeat: no-repeat;
     background-image: none;
@@ -243,35 +243,36 @@ button.hero:hover {
     position: relative;
     justify-content: right;
     align-items: center;
-   
   }
-   .hero{
-       margin: 0;
-       padding: 0px 20px;
-   }
+  .hero {
+    margin: 0;
+    padding: 0px 20px;
+  }
   .hero-mobile {
     display: inline;
     width: 100%;
     object-fit: cover;
     margin-top: 40px;
-   
   }
-  .hero-text > h3{
-      font-size: 48px;
+  .hero-text > h3 {
+    font-size: 48px;
   }
   .stat-list {
     text-align: center;
   }
-  .hero-stat{
-      margin: 0px 0px 40px 0px ;
+  .hero-stat {
+    margin: 0px 0px 40px 0px;
   }
-  .hero-text{
+  .hero-text {
     padding-bottom: 0;
   }
-  
+
   .profile-flex-left {
     flex: 100%;
-    padding-left: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
   }
   .profile-flex-right {
     flex: 100%;
@@ -290,13 +291,18 @@ button.hero:hover {
     height: 350px;
     margin-top: -150px;
     display: flex;
-   padding: auto;
+
+    justify-content: center;
+    align-items: center;
   }
   .profile-info {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  .profile-info > p {
+    padding: 0 40px;
   }
   .profile-flex-right {
     flex-direction: column;
@@ -328,9 +334,14 @@ button.hero:hover {
     margin: 30px auto;
     padding: auto;
   }
+  .profile-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .profile-curve > img {
     display: flex;
-    margin-right: 90px;
   }
   .profile-flex-left {
     display: flex;
@@ -342,9 +353,81 @@ button.hero:hover {
     left: 185px;
     width: 50px;
   }
-  .hero-pattern > img{
+  .hero-pattern > img {
     width: 180px;
   }
- 
-  
+}
+
+/* tablet responsiveness */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-item-right {
+    flex: 100%;
+    flex-direction: row;
+    display: flex;
+  }
+  .hero-stat {
+    flex: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .profile-curve {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    padding: auto;
+  }
+  .profile-curve > img {
+    display: flex;
+    margin: 0 0 40px 0;
+  }
+  .profile-flex-left {
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+  }
+  .profile-flex-left {
+    flex: 100%;
+    padding-left: 0px;
+  }
+  .profile-flex-right {
+    flex: 100%;
+    align-items: center;
+    display: flex;
+  }
+  .profile {
+    display: flex;
+    background-color: #051024;
+    width: 100%;
+    padding: 0px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px 65px;
+  }
+  .profile-info > p {
+    padding: 0;
+  }
+  .container {
+    padding: 10px 20px;
+  }
+  .footer {
+    padding: 10px 20px;
+  }
+  .profile-flex-left {
+    width: 260px;
+    height: 350px;
+    margin-top: -130px;
+    display: flex;
+    padding: auto;
+  }
+  .hero-item-right {
+    margin: 40px 0px 80px 0px;
+  }
 }
